@@ -55,17 +55,22 @@ while True:
 
                         # for add question 
                         if masterAsk == 1:
-                            addQue = input("\nEnter question: ")
+                            addQue = input("\nEnter question: ").lower()
                             print("you can add only 2 options !!")
-                            addOp1 = input("Enter option 1: ")
+                            addOp1 = input("Enter option 1: ").lower()
                             # this loop is for user add same option 
                             while True:
-                                addOp2 = input("Enter option 2: ")
+                                addOp2 = input("Enter option 2: ").lower()
                                 if addOp2 !=addOp1:
                                     break
                                 else:
                                     print("Both option are same\nplease enter different option !!".upper())
-                            addAns = input("Enter right answer: ")
+                            while True:
+                                addAns = input("Enter right answer: ").lower()
+                                if addAns == addOp1 or addAns == addOp2:
+                                    break
+                                else:
+                                    print(f"Please enter right answer either [option1:{addOp1}] or [option2:{addOp2}]")
 
                             ques_dict['question'] = addQue
                             ques_dict['option1'] = addOp1
@@ -84,30 +89,36 @@ while True:
 
                         # for view question
                         if masterAsk == 2:
-                            quesNo = 1
-                            for i in ques_List:
-                                print(f"Q{quesNo}.) {i['question']}")
-                                print(f"A) {i['option1']}")
-                                print(f"B) {i['option2']}")
-                                print(f"Answer: {i['answer']}")
-                                quesNo +=1
-                                print()
+                            if len(ques_List) == 0:
+                                print("Question list is empty\nplease add some question then you can perform view operation".upper())
+                            elif len(ques_List)>=1:
+                                quesNo = 1
+                                for i in ques_List:
+                                    print(f"Q{quesNo}.) {i['question']}".upper())
+                                    print(f"A) {i['option1']}".upper())
+                                    print(f"B) {i['option2']}".upper())
+                                    print(f"Answer: {i['answer']}".upper())
+                                    quesNo +=1
+                                    print()
                         # for delete question
                         if masterAsk == 3:  
-                            queDel = input("Which Question you want to delete: ")
-                            for i in ques_List:
-                                if i['question'] == queDel:
-                                    confirDel = input("Are you sure to delete this question?(y/n): ").lower()
-                                    if confirDel == 'y':
-                                        log_msg = f'{current_time} - [{status[3]}]\n'
-                                        write_log(log_msg)
-                                        ques_List.remove(i)
-                                        print("ThankYou for your confirmation\nThis question will deleted")
-                                        break
-                                    else:
-                                        print("ThankYou for your confirmation no question will deleted.") 
-                            else:
-                                print("No question was found !!")                  
+                            if len(ques_List) == 0:
+                                print("Question list is empty\nplease add some question then you can perform delete operation".upper())
+                            elif len(ques_List)>=1:
+                                queDel = input("Which Question you want to delete: ").lower()
+                                for i in ques_List:
+                                    if i['question'] == queDel:
+                                        confirDel = input("Are you sure to delete this question?(y/n): ").lower()
+                                        if confirDel == 'y':
+                                            log_msg = f'{current_time} - [{status[3]}]\n'
+                                            write_log(log_msg)
+                                            ques_List.remove(i)
+                                            print("ThankYou for your confirmation\nThis question will deleted")
+                                            break
+                                        else:
+                                            print("ThankYou for your confirmation no question will deleted.") 
+                                else:
+                                    print("No question was found !!")                  
                     else:
                         print("please enter valid choice !!".upper())                   
                 else:
@@ -123,10 +134,10 @@ while True:
                 print("To add some question press 1 !!")
             elif len(ques_List)>=1:
                 for i in ques_List:
-                    print(f"Q{ques_no}.) {i['question']}")
-                    print(f"A) {i['option1']}")
-                    print(f"B) {i['option2']}")
-                    answer_input = input("Enter your answer: ")
+                    print(f"Q{ques_no}.) {i['question']}".upper())
+                    print(f"A) {i['option1']}".upper())
+                    print(f"B) {i['option2']}".upper())
+                    answer_input = input("Enter your answer: ").lower()
                     if answer_input == i['answer']:
                         print("Correct !!")
                         print()
