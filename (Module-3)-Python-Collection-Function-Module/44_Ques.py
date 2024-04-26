@@ -8,9 +8,13 @@ my_dict = {
 
 emp_list = []
 
-for key,value in my_dict.items():
-    for i in value:
-        for j in range(0,2):
-            if i not in emp_list:
-                emp_list.append((my_dict['1'][j])+my_dict['2'][j``])
-print(emp_list)
+for item1 in my_dict['1']:
+    for item2 in my_dict['2']:
+        emp_list.append((item1+item2))
+
+str = " ".join(emp_list)
+print(str)
+
+
+    
+        

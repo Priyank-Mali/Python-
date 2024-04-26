@@ -8,6 +8,7 @@ def maximum(list):
         if list[i]>max:
             max = list[i]
     print("Maximum Number:",max)
+    
 def minimun(list):
     min = float("inf")
     for i in range(0,len(list)):
@@ -27,3 +28,6 @@ my_list = [11,32,45,-45,67,-1,0,34,45]
 maximum(my_list)
 minimun(my_list)
 sum(my_list)
+
+
+

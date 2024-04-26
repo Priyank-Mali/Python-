@@ -6,9 +6,6 @@ def removeDuplicate(list):
         for j in range(i+1,len(list)):
             if list[i] not in new_list:
                 new_list.append(list[i])
-                if list[i]!=list[j]:
-                    if list[j] not in new_list:
-                        new_list.append(list[j])
     return print(new_list)
 
 

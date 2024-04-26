@@ -11,7 +11,7 @@ print(my_list)
 # my_list.clear() # remove all elements 
 # print(my_list)
 
-# my_list[0].remove("C") # remove perticular item.
+# my_list.remove("C") # remove perticular item.
 # print(my_list)
 
 #-----------------------------------------

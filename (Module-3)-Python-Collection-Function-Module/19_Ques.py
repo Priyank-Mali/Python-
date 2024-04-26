@@ -7,4 +7,3 @@ print(my_tuple)
 my_str = "priyank"
 my_tuple = tuple(my_str)
 print(my_tuple)
-asdasd

@@ -8,9 +8,13 @@ my_list =  [{'item': 'item1', 'amount': 400}, {'item': 'item2', 'amount': 300}, 
 emp_dict = {}
 
 for i in my_list:
-    for key,value in i.items():
-
-        print(key,"->",value)
-        sad
+    item = i['item']
+    amount = i['amount']
+    # print(item)
+    # print(amount)
+    if item in emp_dict:
+        emp_dict[item] = emp_dict[item] + amount
+    else:
+        emp_dict[item] = amount
 print(emp_dict)
-        sadsad
+

@@ -5,14 +5,11 @@
 my_dict1 = {'a': 100, 'b': 200, 'c':300}
 my_dict2 = {'a': 300, 'b': 200, 'd':400}
 
-final_dict = {}
-
-for key,value in my_dict1.items():
-    final_dict[key] = value
+final_dict = my_dict1.copy()
 
 for key,value in my_dict2.items():
     if key in final_dict:
-        final_dict[key] = final_dict[key] + value
+        final_dict[key] += value
     else:
         final_dict[key] = value
 

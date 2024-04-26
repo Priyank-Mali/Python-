@@ -1,14 +1,15 @@
 # Write a Python script to sort (ascending and descending) a dictionary by value. 
 
 my_dict = {
-    "priyank":99,
-    "rahul":90,
-    "kalam":81
+    1:99,
+    0:90,
+    2:81
 }
 
-# emp_list = sorted(my_dict.items(),key = lambda x : x[1])
+# sort by keys:
+new_dict = sorted(my_dict.items(),key = lambda x : x[0])
+print(new_dict)
 
-# print(emp_list)
-
-emp_list = sorted(my_dict.values())
-print(emp_list)
+# sort by value:
+new_dict = sorted(my_dict.items(),key = lambda x : x[1])
+print(new_dict)
