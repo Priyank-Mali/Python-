@@ -10,7 +10,7 @@ fruit_input = input("Enter fruit name: ")
 fruit_value = int(input("Enter no of fruit: "))
 
 if fruit_input in dict1.keys():
-    print("This fruit is already present")
+    print("This fruit(key) is already present")
 else:
     dict1[fruit_input] = fruit_value
 print(dict1)

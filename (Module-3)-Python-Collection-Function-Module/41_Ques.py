@@ -9,7 +9,7 @@ final_dict = my_dict1.copy()
 
 for key,value in my_dict2.items():
     if key in final_dict:
-        final_dict[key] += value
+        final_dict[key] = final_dict[key] + value
     else:
         final_dict[key] = value
 
