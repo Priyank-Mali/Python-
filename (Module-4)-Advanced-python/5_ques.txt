@@ -1,0 +1,7 @@
+Regexes:
+-> Regular expressions (called REs,or regexes,or regexpatterns)are essentially a tiny , highly
+   specialized programming language embedded inside Python and made available through the
+   re module.
+-> regular expressions are used to operate on strings, we’ll begin with the most common
+   task: matching characters.
+
