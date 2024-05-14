@@ -3,3 +3,4 @@ file = open("6_ques.txt",'r')
 file_list = file.read()
 print(file_list)
 
+

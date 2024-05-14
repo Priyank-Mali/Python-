@@ -1,2 +1,16 @@
-# •	Write python program that user to enter only odd numbers, else will raise an exception
-for
+# •	What are oops concepts? Is multiple inheritance supported in java
+"""
+OOps concept:
+
+-> Class and object
+-> Attributes
+-> Methods
+-> Encapsulation
+-> Inheritance
+-> Polymorphism
+-> Abstraction
+"""
+"""
+-> In Java multiple inheritance is not supported
+
+"""
